@@ -21,6 +21,11 @@ jobs:
           docker run -d --name mi-contenedor -p 8080:8080 mi-app:1.0.0
           echo "docker ps II"
           docker ps
-          
+          sleep 10
+          echo "test invoke"
+          curl http://localhost:8080
+          echo "logs"
+          docker logs mi-contenedor
+
 
 
